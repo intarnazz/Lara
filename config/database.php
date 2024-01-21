@@ -37,10 +37,10 @@ return [
 
         'sqlite' => [
             'driver' => 'sqlite',
-            'url' => env('DATABASE_URL'),
-            'database' => env('DB_DATABASE', database_path('database.sqlite')),
+            'database' => env('DB_DATABASE', database_path('saper.db')),
             'prefix' => '',
-            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
+            'charset' => 'utf8', // Укажите правильную кодировку
+            'collation' => 'utf8_unicode_ci', // Укажите правильную кодировку
         ],
 
         'mysql' => [
