@@ -15,7 +15,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\GetUser;
+use App\Http\Controllers\AddUser;
+use App\Http\Controllers\loginPOST;
+use App\Http\Controllers\GetUserByLogin;
+use App\Http\Controllers\profileImageUpdade;
+
+Route::get('/GetUser/{login}', [GetUserByLogin::class, 'index']);
 
 Route::get('/GetUser', [GetUser::class, 'index']);
+
+Route::get('/AddUser', [AddUser::class, 'index']);
+
+Route::post('/loginPOST', [loginPOST::class, 'index']);
+
+Route::post('/profileImageUpdade', [profileImageUpdade::class, 'store']);
+
+
 
 
