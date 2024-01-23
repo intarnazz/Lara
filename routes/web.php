@@ -20,5 +20,5 @@ Route::get('/{any}', function () {
 
 
 Route::get('/phpinfo', function () {
-  return phpinfo();
+    return phpinfo();
 });

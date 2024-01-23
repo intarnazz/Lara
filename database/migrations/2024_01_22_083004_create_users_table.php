@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('login')->charset('utf8mb4')->collation('utf8mb4_unicode_ci');
             $table->string('password')->charset('utf8mb4')->collation('utf8mb4_unicode_ci');
-            $table->string('img')->charset('utf8mb4')->collation('utf8mb4_unicode_ci');
+            $table->string('img')->charset('utf8mb4')->collation('utf8mb4_unicode_ci')->nullable();
             $table->timestamps();
         });
     }
