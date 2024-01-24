@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Treds extends Model
+class Video extends Model
 {
-    protected $table = 'treds';
-
+    protected $table = 'videos';
+    protected $fillable = ['like', 'dis_like'];
 }

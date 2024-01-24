@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Flover extends Model
+class Coment extends Model
 {
-    protected $table = 'Flover';
+    protected $table = 'coments';
 }

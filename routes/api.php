@@ -21,6 +21,13 @@ use App\Http\Controllers\GetUserByLogin;
 use App\Http\Controllers\profileImageUpdade;
 use App\Http\Controllers\GetProfileImageAva;
 use App\Http\Controllers\GetProfileImageHeader;
+use App\Http\Controllers\GetVideo;
+use App\Http\Controllers\Video;
+use App\Http\Controllers\GetVideoById;
+use App\Http\Controllers\VideoById;
+use App\Http\Controllers\Like;
+use App\Http\Controllers\GetComment;
+use App\Http\Controllers\PostComment;
 
 Route::get('/GetUser/{login}', [GetUserByLogin::class, 'index']);
 
@@ -32,10 +39,20 @@ Route::get('/profileHeader/{login}', [GetProfileImageHeader::class, 'index']);
 
 Route::get('/AddUser', [AddUser::class, 'index']);
 
+Route::get('/getVideo/{fileName}', [GetVideo::class, 'index']);
+
+Route::get('/getVideoById/{id}', [GetVideoById::class, 'index']);
+
+Route::get('/video/{autor}', [Video::class, 'index']);
+
+Route::get('/videoById/{id}', [VideoById::class, 'index']);
+
+Route::get('/like/{id}', [Like::class, 'index']);
+
+Route::get('/GetComment/{id}', [GetComment::class, 'index']);
+
 Route::post('/loginPOST', [loginPOST::class, 'index']);
 
 Route::post('/profileImageUpdade', [profileImageUpdade::class, 'store']);
 
-
-
-
+Route::post('/PostComment', [PostComment::class, 'index']);
